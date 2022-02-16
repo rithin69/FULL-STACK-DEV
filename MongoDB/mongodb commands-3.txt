@@ -1,0 +1,96 @@
+
+> show dbs
+admin           0.000GB
+config          0.000GB
+local           0.000GB
+thapatechnical  0.000GB
+
+> use thapatechnical
+switched to db thapatechnical
+
+> db
+thapatechnical
+
+> show collections
+thapadata
+
+> db.thapadata.find()
+{ "_id" : ObjectId("619bba45bc63c8307b62bc70"), "name" : "rithin", "roll" : 67, "value" : true }
+{ "_id" : ObjectId("619bd3418152a15d1253a7fc"), "name" : "menezes", "type" : "database", "videos" : 5, "active" : true }
+{ "_id" : ObjectId("619bd7448152a15d1253a7fd"), "name" : "rohit", "type" : "data", "videos" : 8, "active" : false }
+{ "_id" : ObjectId("619bd7448152a15d1253a7fe"), "name" : "meklsds", "type" : "databasemanage", "videos" : 78, "active" : true }
+
+> db.thapadata.find().pretty()
+{
+        "_id" : ObjectId("619bba45bc63c8307b62bc70"),
+        "name" : "rithin",
+        "roll" : 67,
+        "value" : true
+}
+{
+        "_id" : ObjectId("619bd3418152a15d1253a7fc"),
+        "name" : "menezes",
+        "type" : "database",
+        "videos" : 5,
+        "active" : true
+}
+{
+        "_id" : ObjectId("619bd7448152a15d1253a7fd"),
+        "name" : "rohit",
+        "type" : "data",
+        "videos" : 8,
+        "active" : false
+}
+{
+        "_id" : ObjectId("619bd7448152a15d1253a7fe"),
+        "name" : "meklsds",
+        "type" : "databasemanage",
+        "videos" : 78,
+        "active" : true
+}
+
+> db.thapadata.find({name:"rohit"}).pretty()
+{
+        "_id" : ObjectId("619bd7448152a15d1253a7fd"),
+        "name" : "rohit",
+        "type" : "data",
+        "videos" : 8,
+        "active" : false
+}
+
+> db.thapadata.find({name:"rohit"},{name:1}).pretty()
+{ "_id" : ObjectId("619bd7448152a15d1253a7fd"), "name" : "rohit" }
+
+> db.thapadata.find({name:"rohit"},{_id:0,name:1}).pretty()
+{ "name" : "rohit" }
+
+> db.thapadata.find({active:true},{_id:0,name:1}).pretty().limit(1)
+{ "name" : "menezes" }
+
+> db.thapadata.find({active:true}).pretty().limit(1)
+{
+        "_id" : ObjectId("619bd3418152a15d1253a7fc"),
+        "name" : "menezes",
+        "type" : "database",
+        "videos" : 5,
+        "active" : true
+}
+
+> db.thapadata.findOne({active:true})
+{
+        "_id" : ObjectId("619bd3418152a15d1253a7fc"),
+        "name" : "menezes",
+        "type" : "database",
+        "videos" : 5,
+        "active" : true
+}
+
+> db.thapadata.find({active:true}).pretty().limit(1).skip(1)
+{
+        "_id" : ObjectId("619bd7448152a15d1253a7fe"),
+        "name" : "meklsds",
+        "type" : "databasemanage",
+        "videos" : 78,
+        "active" : true
+}
+>

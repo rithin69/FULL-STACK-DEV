@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="thapa">helllooo how r u</p>
+    <p id="tha">bye</p>
+
+
+    <p class="welcome">welcome</p>
+    <p class="welcome">welcome 1</p>
+    <p class="welcome">welcome 2</p>
+    <p class="welcome">welcome 3</p>
+     
+    <ul><li>like</li>
+        <li>share</li>
+        <li>subscribe</li></ul>
+
+
+<script> 
+    var a =document.getElementById("thapa").innerHTML
+    document.write(a)                      //hello how r u 
+
+    var b =document.getElementsByClassName("welcome")[0].innerHTML
+    document.write(b)   // welcome
+  
+    var c =document.getElementsByTagName("p")[1].innerHTML
+    document.write(c)   // bye
+
+    //returns the first p ele
+    var d = document.querySelector("p").innerHTML
+    document.write(d)   //helllooo how r u
+
+    var e = document.querySelector("#tha").innerHTML="squid";
+    document.write(e)   //squid
+    //  #id
+    // .class
+
+    //to access children of body returns all the body ele
+    var k =document.body.children
+    console.log(k)
+
+    var para=document.createElement("p")
+    var textnode=document.createTextNode("hry hello")
+    para.appendChild(textnode)
+    console.log(para)
+
+    document.body.appendChild(para)
+
+
+    //acess firstchild and last child
+    var list=document.querySelector("ul")
+    console.log("list")
+    console.log(list.firstChild)
+    console.log(list.lastChild)
+
+
+    //to access siblings  //thapa name of id
+    var firstsiblings=thapa.nextElementSibling
+    var secsiblings=thapa.nextElementSibling.nextElementSibling
+
+    console.log(firstsiblings)
+    console.log(secsiblings)
+ 
+    //to identify parent //list is ul tag
+    console.log(list.parentNode)
+
+
+
+
+</script> 
+</body>
+</html>

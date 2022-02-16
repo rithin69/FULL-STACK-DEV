@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- SetTimeOut -->
+    <!-- The setTimeout() method sets a timer which executes
+    a function or speciified piece of code once the timer 
+    expires  -->
+
+    <!-- SetInterval -->
+    <!-- The setinterval() method repeatedly calls a func or
+    executes a code snippet with a fixed time delay
+     between each `call -->
+
+
+    <p id="thapa">i amm thapa technical</p>
+
+    <button onclick="startTimer()">see magic</button>
+    <button onclick="stopTimer()">STOP</button>
+
+
+    <script> 
+         let ref
+         let mydata=document.querySelector("#thapa");
+         // 1st way
+
+        function welcome(){
+        mydata.innerHTML="welcome to thapa tech"
+         }
+                                
+        function startTimer(){
+        mydata.innerHTML="Loading.........."
+        setTimeout(welcome,4000)
+                         }
+
+        // 2nd way
+        // function startTimer(){
+        //     mydata.innerHTML="Loading......"
+
+        //     ref=setTimeout(()=>{
+        //     mydata.innerHTML="welcome to thapa technical"
+            
+        // },4000)}
+
+        // function stopTimer(){
+        //     clearTimeout(ref)
+        // }
+
+
+
+
+
+
+    </script>
+</body>
+</html>

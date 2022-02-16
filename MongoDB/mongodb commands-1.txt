@@ -1,0 +1,44 @@
+
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+> use thapatechnical
+switched to db thapatechnical
+
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+
+> db.thapadata.insertOne({name:"rithin",roll:67,value:true})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("619bba45bc63c8307b62bc70")
+}
+
+> show dbs
+admin           0.000GB
+config          0.000GB
+local           0.000GB
+thapatechnical  0.000GB
+
+> db
+thapatechnical
+
+> show collections
+thapadata
+
+> db.thapadata.find()
+{ "_id" : ObjectId("619bba45bc63c8307b62bc70"), "name" : "rithin", "roll" : 67, "value" : true }
+
+> db.thapadata.find().pretty()
+{
+        "_id" : ObjectId("619bba45bc63c8307b62bc70"),
+        "name" : "rithin",
+        "roll" : 67,
+        "value" : true
+}
+>

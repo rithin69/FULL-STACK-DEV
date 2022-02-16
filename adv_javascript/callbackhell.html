@@ -1,0 +1,29 @@
+<script>
+
+const rno=()=>{
+    setTimeout(()=>{
+        console.log("api fetching data")
+        let rt=[1,2,3,4,5]
+        console.log(rt)
+        
+        setTimeout((roll)=>{
+            let bio={
+                name:"rithin",
+                age:58,
+                gender:"female"
+            }
+            console.log(`name is ${bio.name} and  age ${bio.age} and rollno ${roll}`)
+
+            setTimeout((gm)=>{
+                console.log(`name is ${bio.name} and  age ${bio.age} and rollno ${roll} and gender ${gm}`)
+
+            },4000,bio.gender)
+
+        },4000,rt[2])
+
+    },2000)
+        
+}
+rno()
+
+</script>

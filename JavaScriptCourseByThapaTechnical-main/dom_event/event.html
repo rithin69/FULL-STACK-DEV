@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, aspernatur!</p>
+    <h1>welcome to my channel</h1>
+    <button onclick="myfun()">click me</button>
+    
+    <button onmouseenter="mywha()">click me</button>
+
+     <!-- //occurs when the mouse btn is released over an ele -->
+    <button onmouseup="twit()">click me</button>
+
+    <!-- //occurs when the mouse btn is pressed over an ele -->
+    <button onmousedown="inst()">click me</button>
+
+    <script>
+        function myfun(){
+            document.body.style.backgroundColor="red"
+            document.body.style.color="white"
+        }
+        function mywha(){
+            document.body.style.backgroundColor="green"
+            document.body.style.color="white"
+
+        }
+        function twit(){
+
+            document.body.style.backgroundColor="blue"
+            document.body.style.color="white"
+        }
+        function inst(){
+            document.body.style.backgroundColor="purple"
+            document.body.style.color="white"
+
+        }
+
+    </script>
+</body>
+</html>
